@@ -14,14 +14,6 @@ class TicTacToe
     @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   end
 
-  def board
-    @board
-  end
-
-  def board=(new_board)
-    @board = new_board
-  end
-
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
