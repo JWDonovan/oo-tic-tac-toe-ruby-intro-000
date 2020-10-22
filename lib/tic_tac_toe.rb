@@ -77,4 +77,12 @@ class TicTacToe
 
     false
   end
+
+  def full?(board)
+    board_full = board.all? do |index|
+      index == 'O' || index == 'X'
+    end
+
+    board_full
+  end
 end
