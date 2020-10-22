@@ -96,4 +96,32 @@ class TicTacToe
       return false
     end
   end
+
+  def over?(board)
+    won?(board) || full?(board) || draw?(board)
+  end
+
+  def winner(board)
+    won = won?(board)
+
+    if won
+      return board[won[0]]
+    end
+
+    nil
+  end
+
+  def play(board)
+    counter = 0
+
+    until over?(board)
+      turn(board)
+    end
+
+    if won?(board)
+      puts "Congratulations #{winner(board)}!"
+    elsif draw?(board)
+      puts "Cat's Game!"
+    end
+  end
 end
