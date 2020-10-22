@@ -34,8 +34,8 @@ class TicTacToe
     !(board[index].nil? || board[index] == ' ')
   end
 
-  def move(board, pos, char)
-    board[pos] = char
+  def move(pos, char)
+    @board[pos] = char
   end
 
   def turn_count(board)
