@@ -15,6 +15,10 @@ class TicTacToe
     input.to_i - 1
   end
 
+  def position_taken?(board, index)
+  !(board[index].nil? || board[index] == ' ')
+end
+
   def move(board, pos, char)
     board[pos] = char
   end
