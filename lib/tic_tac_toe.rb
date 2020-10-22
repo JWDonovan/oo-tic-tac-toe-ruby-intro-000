@@ -85,4 +85,15 @@ class TicTacToe
 
     board_full
   end
+
+  def draw?(board)
+    full = full?(board)
+    won = won?(board)
+
+    if full && !won
+      return true
+    elsif (!won && !full) || won
+      return false
+    end
+  end
 end
